@@ -15,7 +15,7 @@ Those modules are the following:
 
 ## Order of execution
 
-1. `init.lua` requies `doom_global.lua` to set the `doom` global object.
+1. `init.lua` requires `doom_global.lua` to set the `doom` global object.
 2. `init.lua` loads `config.lua` which does the following
   a. Sets some default `vim.opt` options.
   b. Loads the user's enabled modules from `modules.lua`
