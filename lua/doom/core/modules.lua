@@ -29,8 +29,6 @@ local core_modules = {
 }
 modules.enabled_modules = vim.tbl_deep_extend("keep", core_modules, dofile(modules.source))
 
-local system = require("doom.core.system")
-
 local keymaps_service = require("doom.services.keymaps")
 local commands_service = require("doom.services.commands")
 local autocmds_service = require("doom.services.autocommands")
@@ -89,7 +87,7 @@ modules.load_modules = function()
             end
 
             -- Only pin dependencies if doom.freeze_dependencies is true
-            spec.lock = spec.commit and doom.freeze_dependencies
+            spec.pin = spec.commit and doom.freeze_dependencies
 
             -- Save module spec to be initialised later
             table.insert(doom.packages, spec)
