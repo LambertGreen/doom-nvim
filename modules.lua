@@ -76,7 +76,7 @@ return {
 
     -- Compiled
     -- "rust",
-    -- "cc",
+    "cc",
     -- "ocaml",
     -- "haskell",
 
